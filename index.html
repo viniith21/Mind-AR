@@ -1,35 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>AR.js Mind Project</title>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-  </head>
-  <body style="margin: 0; overflow: hidden;">
-    <a-scene
-      vr-mode-ui="enabled: false"
-      embedded
-      arjs="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
-    >
-      <a-nft
-        type="nft"
-        url="brain1.png"
-        smooth="true"
-        smoothCount="10"
-        smoothTolerance=".01"
-        smoothThreshold="5"
-      >
-        <a-entity
-          position="0 0 0"
-          scale="0.2 0.2 0.2"
-          rotation="0 180 0"
-          gltf-model="brain1.glb"
-          id="mind-model"
-          event-set__click="_event: click; _target: #mind-model; rotation: 0 360 0"
-        ></a-entity>
-      </a-nft>
-      <a-entity camera></a-entity>
-    </a-scene>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>AR.js Mind Project</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+</head>
+
+<body style="margin: 0; overflow: hidden;">
+  <a-scene vr-mode-ui="enabled: false" embedded
+    arjs="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+    <a-nft type="nft" url="brain1.png" smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
+      <a-entity position="0 0 0" scale="0.2 0.2 0.2" rotation="0 180 0" gltf-model="brain1.glb"></a-entity>
+    </a-nft>
+
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+
 </html>
